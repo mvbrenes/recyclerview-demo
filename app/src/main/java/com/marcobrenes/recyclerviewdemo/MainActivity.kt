@@ -2,8 +2,7 @@ package com.marcobrenes.recyclerviewdemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -11,9 +10,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<RecyclerView>(R.id.recyclerview).apply {
-            layoutManager = LinearLayoutManager(applicationContext, RecyclerView.HORIZONTAL, false)
+            layoutManager = GridLayoutManager(applicationContext, 3).apply {
+                spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+                    override fun getSpanSize(position: Int): Int {
+                        return if (position % 4 == 0) 3 else 1
+                    }
+                }
+            }
             adapter = SimpleRVAdapter()
-            addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.HORIZONTAL))
         }
     }
 }

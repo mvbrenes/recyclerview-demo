@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 class SimpleRVAdapter : RecyclerView.Adapter<SimpleViewHolder>() {
 
     val data by lazy {
-        (1..15).map {
+        (1..50).map {
             it.toString()
-        }.toTypedArray()
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleViewHolder {
