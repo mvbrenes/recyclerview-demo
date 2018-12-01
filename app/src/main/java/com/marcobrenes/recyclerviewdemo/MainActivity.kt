@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<RecyclerView>(R.id.recyclerview).apply {
-            layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, true)
+            layoutManager = LinearLayoutManager(applicationContext, RecyclerView.HORIZONTAL, false)
             adapter = SimpleRVAdapter()
-            addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.VERTICAL))
+            addItemDecoration(DividerItemDecoration(applicationContext, DividerItemDecoration.HORIZONTAL))
         }
     }
 }
