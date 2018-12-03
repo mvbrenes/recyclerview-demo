@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.MaterialComponents.Light">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/primaryColor</item>-->
+        <!--<item name="colorPrimaryVariant">@color/primaryLightColor</item>-->
+        <!--<item name="colorPrimaryDark">@color/primaryDarkColor</item>-->
+        <!--<item name="colorSecondary">@color/secondaryColor</item>-->
+        <!--<item name="colorSecondaryVariant">@color/secondaryLightColor</item>-->
+        <!--<item name="android:textColorPrimary">@color/primaryTextColor</item>-->
+        <!--<item name="android:textColorSecondary">@color/secondaryTextColor</item>-->
+    <!--</style>-->
+
 </resources>
